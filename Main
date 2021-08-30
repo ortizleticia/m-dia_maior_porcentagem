@@ -1,0 +1,45 @@
+#a. a média do salário da população;
+
+soma_salario = 0
+soma_filhos = 0
+maior_salario = 0
+menor_salario = 0
+salario_1500 = 0
+salarios = []
+
+for n in range(0, 10):
+    print("Informe o salário")
+    salario = float(input())
+    
+    soma_salario += salario
+    media_salario = soma_salario/10
+
+#b. a média do número de filhos;
+
+    print("Informe o número de filhos")
+    filhos = int(input())
+    
+    soma_filhos += filhos
+    media_filhos = soma_filhos/10
+
+#c. o maior salário;
+
+    if 10 == 0:
+        maior_salario = menor_salario = salario
+    else:
+        if (salario > maior_salario):
+            maior_salario = salario
+
+#d. a porcentagem de pessoas com salário até R$ 1500,00.
+
+    if(salario<=1500.00):
+        salario_1500 = salario_1500 + 1
+        porcentagem_salario = salario_1500/10
+
+
+
+print("-"*50, "RELATÓRIO", "-"*50)
+print(f"\nMédia salarial:{media_salario}")
+print(f"\nMédia de filhos:{media_filhos}")
+print(f"\nO maior salário é:{maior_salario}")
+print(f"\nA porcentagem de pessoas com salário até R$ 1500,00 é:{porcentagem_salario:.0%}")
